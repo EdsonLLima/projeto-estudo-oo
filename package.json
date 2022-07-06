@@ -1,0 +1,11 @@
+{
+  "name": "bank-cadastro",
+  "version": "1.0.0",
+  "description": "Projeto de Estudos Sobre OO com JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edson Lima",
+  "license": "ISC"
+}
