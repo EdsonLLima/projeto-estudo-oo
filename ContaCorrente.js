@@ -1,6 +1,8 @@
 import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
+  //Atributo estatico da classe
+  static numeroDeContas = 0; 
   agencia;
 
   //#saldo = 0
@@ -33,7 +35,10 @@ export class ContaCorrente {
 
   constructor(cliente, agencia) {
     this.agencia = agencia;
-    this.cliente = cliente; //usando o acessor do GET no lugar do _cliente
+    //usando o acessor do GET no lugar do _cliente
+    this.cliente = cliente;
+    // atributo statico que vai ser somando a cada novo cliente criado
+    ContaCorrente.numeroDeContas += 1;
   }
 
   depositar(valor) {
