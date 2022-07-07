@@ -8,16 +8,16 @@ export class ContaCorrente {
   _cliente;
 
   //Metodos acessores SET | GET
-  set cliente(novoValor) {
-    if (novoValor instanceof Cliente) this._cliente = novoValor;
+  get saldo() {
+    return this._saldo;
   }
 
   get cliente() {
     return this._cliente;
   }
 
-  get saldo() {
-    return this._saldo;
+  set cliente(novoValor) {
+    if (novoValor instanceof Cliente) this._cliente = novoValor;
   }
 
   //metodo - faz alguma coisa
@@ -29,6 +29,11 @@ export class ContaCorrente {
     } else {
       console.log("valor insuficiente para saque");
     }
+  }
+
+  constructor(cliente, agencia) {
+    this.agencia = agencia;
+    this.cliente = cliente; //usando o acessor do GET no lugar do _cliente
   }
 
   depositar(valor) {
