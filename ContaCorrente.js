@@ -1,9 +1,14 @@
 export class ContaCorrente {
   agencia;
-  cliente;
 
   //#saldo = 0
   _saldo = 0; //privado
+  _cliente;
+
+  //Metodos acessores SET | GET
+  set cliente(novoValor) {
+    this._cliente = novoValor;
+  }
 
   //metodo - faz alguma coisa
   sacar(valor) {
