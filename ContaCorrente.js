@@ -12,6 +12,10 @@ export class ContaCorrente {
     if (novoValor instanceof Cliente) this._cliente = novoValor;
   }
 
+  get cliente() {
+    return this._cliente;
+  }
+
   //metodo - faz alguma coisa
   sacar(valor) {
     if (this._saldo >= valor) {
