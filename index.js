@@ -12,7 +12,7 @@ Conta1.cliente = cliente1;
 Conta1.depositar(500);
 
 const Conta2 = new ContaCorrente();
-Conta2.cliente = new Cliente();
+Conta2.cliente = cliente1;
 Conta2.agencia = 1001;
 
 Conta1.transferir(200, Conta2);

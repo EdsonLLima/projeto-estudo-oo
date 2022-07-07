@@ -1,3 +1,5 @@
+import { Cliente } from "./Cliente.js";
+
 export class ContaCorrente {
   agencia;
 
@@ -7,7 +9,7 @@ export class ContaCorrente {
 
   //Metodos acessores SET | GET
   set cliente(novoValor) {
-    this._cliente = novoValor;
+    if (novoValor instanceof Cliente) this._cliente = novoValor;
   }
 
   //metodo - faz alguma coisa
