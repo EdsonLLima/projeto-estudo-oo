@@ -1,5 +1,7 @@
-import class ContaCorrente {
+export class ContaCorrente {
   agencia;
+  cliente;
+
   //#saldo = 0
   _saldo = 0; //privado
 
@@ -19,5 +21,10 @@ import class ContaCorrente {
       return;
     }
     this._saldo += valor;
+  }
+
+  transferir(valor, conta) {
+    const valorSacado = this.sacar(valor);
+    conta.depositar(valorSacado);
   }
 }

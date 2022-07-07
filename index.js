@@ -6,15 +6,19 @@ const cliente1 = new Cliente();
 cliente1.nome = "Ricardo";
 cliente1.cpf = 11122233309;
 
-// const cliente2 = new Cliente();
-// cliente2.nome = "Alice";
-// cliente2.cpf = 88822233309;
+const cliente2 = new Cliente();
+cliente2.nome = "Alice";
+cliente2.cpf = 88822233309;
 
-const ContaCorrenteRicardo = new ContaCorrente();
-ContaCorrenteRicardo.agencia = 1001;
+const Conta1 = new ContaCorrente();
+Conta1.agencia = 1001;
+Conta1.cliente = cliente1;
+Conta1.depositar(500);
 
-ContaCorrenteRicardo.depositar(250);
-const valorSacado = ContaCorrenteRicardo.sacar(50);
+const Conta2 = new ContaCorrente();
+Conta2.agencia = 1001;
+Conta2.cliente = cliente2;
+Conta1.transferir(200, Conta2);
 
-console.log(valorSacado);
-console.log(ContaCorrenteRicardo);
+console.log(Conta1);
+console.log(Conta2);
